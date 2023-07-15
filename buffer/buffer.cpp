@@ -27,5 +27,12 @@ int main() {
     std::cin >> a >> b;  // get two numbers and store in variable a and b
 
     std::cout << "You entered: " << a << " and " << b << '\n';
+    
+    // UNITIALIZED VARIABLES
+    int c;  // unitialized because we have not given it a value
+    
+    // print the value of x to the screen
+    std::cout << c << '\n';  // who knows what we will get, because c is uninitialized
+
     return 0;
 }
