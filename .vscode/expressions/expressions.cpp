@@ -13,5 +13,12 @@ int main() {
 
     std::cout << e << '\n';
 
+    // 2               // 2 is a literal that evaluates to value 2
+    // "Hello World"   // "Hello World!" is a literal that evaluates to the text "Hello World"
+    // x               // x is a variable that evaluates to the value of x
+    // 2+3             // operator + uses operands 2 and 3 to evaluate to value 5
+    // five()          // evaluates to the return value of function five()
+    
     return 0;
+
 }
