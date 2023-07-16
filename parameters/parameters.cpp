@@ -20,26 +20,46 @@
 //     return 0;
 // }
 
-void doPrint() {
-    std::cout << "In doPrint()\n";
-}
+// void doPrint() {
+//     std::cout << "In doPrint()\n";
+// }
 
 // This function takes one integer parameter named x
 // the caller will supply the value of x
-void printValue(int x) {
-    std::cout << x << '\n';
+// void printValue(int x) {
+//     std::cout << x << '\n';
+// }
+
+// int add(int x, int y) {
+//     return x + y;
+// }
+
+// int main() {
+//     doPrint();              // this call has no args
+//     printValue(6);          // 6 is the argument passed to function printValue()
+//     int result{add(2, 3)};  // 2 and 3 are passed to function add
+    
+//     std::cout << result << "\n";
+
+//     return 0;
+// }
+
+// We can also use return values as arguments
+
+int getValueFromUser() {
+    std::cout << "Enter an integer: ";
+    int input{};
+    std::cin >> input;
+
+    return input;
 }
 
-int add(int x, int y) {
-    return x + y;
+void printDouble(int value) {
+    std::cout << value << " doubled is: " << value*2 << '\n';
 }
 
 int main() {
-    doPrint();      // this call has no args
-    printValue(6);  // 6 is the argument passed to function printValue()
-    int result{add(2, 3)};      //
-    
-    std::cout << result << "\n";
+    printDouble(getValueFromUser());
 
     return 0;
 }
