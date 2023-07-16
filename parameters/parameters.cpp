@@ -46,20 +46,44 @@
 
 // We can also use return values as arguments
 
+// int getValueFromUser() {
+//     std::cout << "Enter an integer: ";
+//     int input{};
+//     std::cin >> input;
+
+//     return input;
+// }
+
+// void printDouble(int value) {
+//     std::cout << value << " doubled is: " << value*2 << '\n';
+// }
+
+// int main() {
+//     printDouble(getValueFromUser());
+
+//     return 0;
+// }
+
+// Write a program that reads an integer from the user, doubles it using the doubleNumber() you wrote in the previous quiz question, and then print the doubled value out to the console
+
+int doubleNumber(int x) {
+    return x*2;
+}
+
 int getValueFromUser() {
-    std::cout << "Enter an integer: ";
+    std::cout << "Please enter an integer: ";
+
     int input{};
     std::cin >> input;
 
     return input;
 }
 
-void printDouble(int value) {
-    std::cout << value << " doubled is: " << value*2 << '\n';
-}
-
 int main() {
-    printDouble(getValueFromUser());
+    int result{doubleNumber(getValueFromUser())};
+
+    std::cout << result;
+
 
     return 0;
 }
