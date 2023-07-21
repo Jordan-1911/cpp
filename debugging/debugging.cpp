@@ -39,7 +39,8 @@ std::cerr << "main::y = " << y << '\n';
 
     std::cout << x << " + " << y << '\n';
 
-    int z{add(x, 5)};
+    // int z{add(x, 5)};  // obviously this is the line that is incorrect
+    int z{add(x, y)};
 std::cerr << "main::z = " << z << '\n';
     printResult(z);
 
