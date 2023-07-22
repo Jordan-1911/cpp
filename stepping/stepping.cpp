@@ -72,19 +72,19 @@
  * Breakpoints vs. Run to Cursor
 */
 
-#include <iostream>
+// #include <iostream>
 
-void printValue(int value) {
-    std::cout << value << '\n';
-}
+// void printValue(int value) {
+//     std::cout << value << '\n';
+// }
 
-int main() {
-    printValue(5);
-    printValue(6);
-    printValue(7);
+// int main() {
+//     printValue(5);
+//     printValue(6);
+//     printValue(7);
 
-    return 0;
-}
+//     return 0;
+// }
 
 /**
  * SET NEXT STATEMENT
@@ -92,3 +92,11 @@ int main() {
  * 
  * - In VS Code - Right click on a statement and choose Jump to cursor from the context menu. 
 */
+
+// #include <iostream>
+
+// int main() {
+//     for (int i = 0; i < 5; i++) {
+//         std::cout << "The current index is: " << i << '\n';
+//     }
+// }
