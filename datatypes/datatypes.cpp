@@ -111,3 +111,43 @@ cpp
 
  * 
 */
+
+/**
+ * Math: an 8 bit integer contains 8 bits. 2^8 is 256, so an 8-bit integer can hold 256 possible values between -127 and 127, inclusive
+ * - 7 bits hold the magnitude of the number, and 1 bit is used to hold the sign
+ * 
+*/
+
+/**
+ * Ranges:
+ * 
+ * Size/Type            Range
+ * 8 bit signed         -128 to 127
+ * 16 bit signed        -32,768 to 32,767
+ * 32 bit signed        -2,147,483,648 to 2,147,483,647
+ * 64 bit signed        -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+ * 
+*/
+
+/**
+ * INTEGER OVERFLOW
+ * - What happens if we try to assign the value 140 to an 8-bit signed integer?
+ * - the number is outside of the range that an 8-bit integer can hold. The number 140 requires 9 bits to represent (8 magnitude bits and 1 sign bit) but we only have 8 bits availabe in an 8-bit integer.
+ * 
+ * - Integer overflow (or overflow) occurs when we try to do this. This will result in undefined behavior. 
+*/
+
+/**
+ * FIXED-WIDTH INTEGERS
+ * 
+ * Name             Type            Range
+ * std::int8_t      1 byte signed   -128 to 127
+ * std::uint8_t     1 byte unsigned 0 to 255
+ * std::int16_t     2 byte signed   -32,768 to 32,767
+ * std::uint16_t    2 byte unsigned 0 to 65,535
+ * std::int32_t     4 byte signed   -2,147,483,648 to 2,147,483,647
+ * std::uint32_t    4 byte signed   0 to 4,294,967,295
+ * std::int64_t     8 byte signed   -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+ * std::uint64_t    8 byte unsigned 0 to 18,446,744,073,709,551,615
+ * 
+*/
