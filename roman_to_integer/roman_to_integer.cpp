@@ -85,5 +85,10 @@ int main() {
     int result = sol.romanToInt(input);
     std::cout << "The roman numeral: " << input << " corresponds to: " << result << '\n';
 
+    Solution solTwo;
+    string inputTwo = "LVIII";
+    int resultTwo = solTwo.romanToInt(inputTwo);
+    std::cout << "The roman numeral: " << inputTwo << " corresponds to: " << resultTwo << '\n';
+
     return 0;
 }
