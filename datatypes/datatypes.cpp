@@ -62,3 +62,52 @@
  * 
  * 
  */
+
+#include <iostream>
+
+int main() {
+    std::cout << "bool:\t\t" << sizeof(bool) << " bytes\n";
+    std::cout << "char:\t\t" << sizeof(char) << " bytes\n";
+    std::cout << "wchar_t:\t" << sizeof(wchar_t) << " bytes\n";
+    std::cout << "char16_t:\t" << sizeof(char16_t) << " bytes\n";
+    std::cout << "char32_t:\t" << sizeof(char32_t) << " bytes\n";
+    std::cout << "short:\t\t" << sizeof(short) << " bytes\n";
+    std::cout << "int:\t\t" << sizeof(int) << " bytes\n";
+    std::cout << "long:\t\t" << sizeof(long) << " bytes\n";
+    std::cout << "long long:\t" << sizeof(long long) << " bytes\n";
+    std::cout << "float:\t\t" << sizeof(float) << " bytes\n";
+    std::cout << "double:\t\t" << sizeof(double) << " bytes\n";
+    std::cout << "long double:\t" << sizeof(long double) << " bytes\n";
+
+    return 0;
+}
+
+/**
+ * sizeof() vs size()
+ * - sizeof() is a compile-time operator that returns in bytes the size of the object or type that is passed as its operand.
+ * - for example, sizeof(int) will return the size of in int in bytes
+ * int arr[10];
+ * std::cout << sizeof(arr);  // Output: size of entire array in bytes, e.g., 40 on a system where an int is 4 bytes
+
+size() is a function provided by several container classes in the C++ Standard Library, such as std::vector, std::array, std::string, std::list, std::map, etc. It returns the number of elements that the container is currently holding, not the size in bytes.
+
+Example:
+
+cpp
+
+std::vector<int> vec = {1, 2, 3, 4, 5};
+std::cout << vec.size(); // Output: 5 (number of elements in the vector)
+
+In C++17, a new feature was introduced, std::size() (in header <iterator>), that works with both C-style arrays and standard library containers.
+
+Example:
+
+cpp
+
+    int arr[10];
+    std::cout << std::size(arr); // Output: 10 (number of elements in the array)
+
+
+
+ * 
+*/
