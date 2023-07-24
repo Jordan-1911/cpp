@@ -139,6 +139,7 @@ cpp
 
 /**
  * FIXED-WIDTH INTEGERS
+ * - can be accessed using #include <cstdint>
  * 
  * Name             Type            Range
  * std::int8_t      1 byte signed   -128 to 127
@@ -150,4 +151,17 @@ cpp
  * std::int64_t     8 byte signed   -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
  * std::uint64_t    8 byte unsigned 0 to 18,446,744,073,709,551,615
  * 
+*/
+
+/**
+ * BEST PRACTICES
+ * - prefer int when the size of the integer does not matter (e.g. the number will always fit within the range of a 2-byte signed integer). For example, when asking a user for their age, or counting from 1 to 10, it does not matter whether the int is 16 or 32 bits (the number will fit either way). This will cover the vast majority of the cases you are likely to run across
+ * - prefer std::int#_t when storing a quantity that needs a guarenteed range
+ * - prefer std::uint#_t when doing bit manipulation or where well-defined wrap-around behavior is required.
+ * 
+ * Avoid the following when possible:
+ * - unsigned types for holding quantities
+ * - the 8-bit fixed-width integer types
+ * - the fast and least fixed-width types
+ * - Any compiler specific ficed-width integers (Visual Studio defines __int8, __int16, etc.)
 */
